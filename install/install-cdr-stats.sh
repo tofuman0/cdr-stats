@@ -16,10 +16,10 @@
 #
 # To download and run the script on your server :
 #
-# cd /usr/src/ ; rm install-cdr-stats.sh ; wget --no-check-certificate https://raw.github.com/cdr-stats/cdr-stats/master/install/install-cdr-stats.sh -O install-cdr-stats.sh ; bash install-cdr-stats.sh
+# cd /usr/src/ ; rm install-cdr-stats.sh ; wget --no-check-certificate https://raw.github.com/tofuman0/cdr-stats/master/install/install-cdr-stats.sh -O install-cdr-stats.sh ; bash install-cdr-stats.sh
 #
 # Install develop branch
-# cd /usr/src/ ; rm install-cdr-stats.sh ; wget --no-check-certificate https://raw.github.com/cdr-stats/cdr-stats/develop/install/install-cdr-stats.sh -O install-cdr-stats.sh ; bash install-cdr-stats.sh
+# cd /usr/src/ ; rm install-cdr-stats.sh ; wget --no-check-certificate https://raw.github.com/tofuman0/cdr-stats/develop/install/install-cdr-stats.sh -O install-cdr-stats.sh ; bash install-cdr-stats.sh
 #
 
 # Set branch to install develop / default: master
@@ -31,7 +31,7 @@ fi
 #Get Scripts dependencies
 cd /usr/src/
 rm cdr-stats-functions.sh
-wget --no-check-certificate https://raw.github.com/cdr-stats/cdr-stats/$BRANCH/install/cdr-stats-functions.sh -O cdr-stats-functions.sh
+wget --no-check-certificate https://raw.github.com/tofuman0/cdr-stats/$BRANCH/install/cdr-stats-functions.sh -O cdr-stats-functions.sh
 
 #Include cdr-stats install functions
 source cdr-stats-functions.sh
