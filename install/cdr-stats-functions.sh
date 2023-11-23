@@ -37,7 +37,7 @@ CDRSTATS_ENV="cdr-stats"
 HTTP_PORT="8008"
 DATETIME=$(date +"%Y%m%d%H%M%S")
 KERNELARCH=$(uname -m)
-SCRIPT_NOTICE="This install script is only intended to run on Debian 7.X"
+SCRIPT_NOTICE="This install script is only intended to run on Debian 7.X - 12.X"
 
 #Django bug https://code.djangoproject.com/ticket/16017
 export LANG="en_US.UTF-8"
@@ -47,7 +47,7 @@ export LANG="en_US.UTF-8"
 func_identify_os() {
     if [ -f /etc/debian_version ] ; then
         DIST='DEBIAN'
-        if [ "$(lsb_release -cs)" != "wheezy" ] && [ "$(lsb_release -cs)" != "jessie" ]; then
+        if [ "$(lsb_release -cs)" != "wheezy" ] && [ "$(lsb_release -cs)" != "jessie" ] && [ "$(lsb_release -cs)" != "stretch" ] && [ "$(lsb_release -cs)" != "buster" ] && [ "$(lsb_release -cs)" != "bullseye" ] && [ "$(lsb_release -cs)" != "bookworm" ]; then
             echo $SCRIPT_NOTICE
             exit 255
         fi
@@ -406,7 +406,7 @@ func_install_source(){
     rm -rf cdr-stats
     mkdir -p /var/log/cdr-stats
 
-    git clone -b $BRANCH git://github.com/cdr-stats/cdr-stats.git
+    git clone -b $BRANCH git://github.com/tofuman0/cdr-stats.git
     cd cdr-stats
 
     #Install Develop / Master
